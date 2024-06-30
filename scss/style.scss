@@ -1,0 +1,56 @@
+@import 'nullstyle';
+@import 'mixin';
+
+$black: #101010;
+$white: #f0f0f0;
+
+body{
+	background-color: $black;
+	color: $white;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+[class*="__container"] {
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	margin: 0 auto;
+	/* 1110 + 15 + 15 */
+	max-width: 1140px;
+}
+
+.tournament {
+		&__container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+		}
+		&__eighth-finals {
+		}
+		&__list{
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+		&__item {
+			min-width: 100px;
+			min-height: 40px;
+			border: 1px solid $white;
+		}
+		&__quarter-finals {
+			gap: 40px;
+		}
+		&__semi-finals {
+			gap: 80px;
+		}
+		&__final {
+			gap: 40px;
+		}
+}
