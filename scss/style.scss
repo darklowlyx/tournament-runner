@@ -59,10 +59,22 @@ body{
 		&__item {
 			min-width: 100px;
 			min-height: 40px;
-			border: 2px solid $white;
+			border: 1px solid $white;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			position: relative;
+			overflow: hidden;
+			&:hover img{
+				opacity: 0.7;
+			}
+			img{
+				transition: all 0.2s ease;
+				position: absolute;
+				width: 100%;
+				opacity: 0.4;
+				z-index: -2;
+			}
 			&-left{
 				&::before{
 					left: -120%;
@@ -76,31 +88,9 @@ body{
 		}
 		&__quarter-finals {
 			gap: 100px;
-			.tournament__item{
-				position: relative;
-				&::before{
-					content: '';
-					position: absolute;
-					width: 120%;
-					height: 2px;
-					background-color: $white;
-					top: 50%;
-				}
-			}
 		}
 		&__semi-finals {
 			gap: 230px;
-			.tournament__item{
-				position: relative;
-				&::before{
-					content: '';
-					position: absolute;
-					width: 120%;
-					height: 2px;
-					background-color: $white;
-					top: 50%;
-				}
-			}
 		}
 		&__final {
 			gap: 40px;
