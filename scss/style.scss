@@ -7,6 +7,14 @@ $white: #f0f0f0;
 body{
 	background-color: $black;
 	color: $white;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 700;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .wrapper {
@@ -37,20 +45,66 @@ body{
 		&__list{
 			display: flex;
 			flex-direction: column;
+			gap: 40px;
+		}
+		&__items{
+			display: flex;
+			flex-direction: column;
 			gap: 20px;
+			
+		}
+		&__items-q{
+			gap: 101px;
 		}
 		&__item {
 			min-width: 100px;
 			min-height: 40px;
-			border: 1px solid $white;
+			border: 2px solid $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&-left{
+				&::before{
+					left: -120%;
+				}
+			}
+			&-right{
+				&::before{
+					right: -120%;
+				}
+			}
 		}
 		&__quarter-finals {
-			gap: 40px;
+			gap: 100px;
+			.tournament__item{
+				position: relative;
+				&::before{
+					content: '';
+					position: absolute;
+					width: 120%;
+					height: 2px;
+					background-color: $white;
+					top: 50%;
+				}
+			}
 		}
 		&__semi-finals {
-			gap: 80px;
+			gap: 230px;
+			.tournament__item{
+				position: relative;
+				&::before{
+					content: '';
+					position: absolute;
+					width: 120%;
+					height: 2px;
+					background-color: $white;
+					top: 50%;
+				}
+			}
 		}
 		&__final {
 			gap: 40px;
 		}
 }
+
+/* IMPORTANT ADAPTIVE */

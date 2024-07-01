@@ -55,6 +55,12 @@ button {
 body {
   background-color: #101010;
   color: #f0f0f0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .wrapper {
@@ -82,19 +88,60 @@ body {
 .tournament__list {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+}
+.tournament__items {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+.tournament__items-q {
+  gap: 101px;
 }
 .tournament__item {
   min-width: 100px;
   min-height: 40px;
-  border: 1px solid #f0f0f0;
+  border: 2px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tournament__item-left::before {
+  left: -120%;
+}
+.tournament__item-right::before {
+  right: -120%;
 }
 .tournament__quarter-finals {
-  gap: 40px;
+  gap: 100px;
+}
+.tournament__quarter-finals .tournament__item {
+  position: relative;
+}
+.tournament__quarter-finals .tournament__item::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 2px;
+  background-color: #f0f0f0;
+  top: 50%;
 }
 .tournament__semi-finals {
-  gap: 80px;
+  gap: 230px;
+}
+.tournament__semi-finals .tournament__item {
+  position: relative;
+}
+.tournament__semi-finals .tournament__item::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 2px;
+  background-color: #f0f0f0;
+  top: 50%;
 }
 .tournament__final {
   gap: 40px;
 }
+
+/* IMPORTANT ADAPTIVE */

@@ -1,0 +1,1 @@
+let item = document.querySelector(".tournament__item");
