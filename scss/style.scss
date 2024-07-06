@@ -97,4 +97,50 @@ body{
 		}
 }
 
+.winner-container {
+	display: none;
+	text-align: center;
+	margin-top: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+}
+
+.winner {
+	font-size: 50px;
+	animation: growAndBurst 2s forwards;
+}
+
+.trophy {
+	font-size: 50px;
+	animation: bounce 2s infinite;
+}
+
+@keyframes growAndBurst {
+	0% {
+			transform: scale(1);
+	}
+	50% {
+			transform: scale(2);
+	}
+	100% {
+			transform: scale(0);
+	}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0);
+	}
+	40% {
+			transform: translateY(-30px);
+	}
+	60% {
+			transform: translateY(-15px);
+	}
+}
+
 /* IMPORTANT ADAPTIVE */
+
